@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chart.js example</title>
+    <style>
+      .chartCard {
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 30%;
+        height: 30%;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Match Maybe Just</h1>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="match-maybe-just-cpu"></canvas>
+      </div>
+      <div class="chartBox">
+        <canvas id="match-maybe-just-mem"></canvas>
+      </div>
+      <div class="chartBox">
+        <canvas id="match-maybe-just-size"></canvas>
+      </div>
+    </div>
+
+    <h1>Match Maybe Nothing</h1>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="match-maybe-nothing-cpu"></canvas>
+      </div>
+      <div class="chartBox">
+        <canvas id="match-maybe-nothing-mem"></canvas>
+      </div>
+      <div class="chartBox">
+        <canvas id="match-maybe-nothing-size"></canvas>
+      </div>
+    </div>
+
+    <h1>Amount Of</h1>
+    <h2>size</h2>
+    <div style="width: 88vw;"><canvas id="amount-of-size"></canvas></div>
+    <h2>cpu</h2>
+    <div style="width: 88vw;"><canvas id="amount-of-cpu"></canvas></div>
+    <h2>memory</h2>
+    <div style="width: 88vw;"><canvas id="amount-of-mem"></canvas></div>
+
+    <!-- <div style="width: 500px;"><canvas id="dimensions"></canvas></div><br/> -->
+    <h1>Factorial</h1>
+    <h2>size</h2>
+    <div style="width: 88vw;"><canvas id="factorial-size"></canvas></div>
+    <h2>cpu</h2>
+    <div style="width: 88vw;"><canvas id="factorial-cpu"></canvas></div>
+    <h2>memory</h2>
+    <div style="width: 88vw;"><canvas id="factorial-mem"></canvas></div>
+
+    <!-- <div style="width: 500px;"><canvas id="dimensions"></canvas></div><br/> -->
+    <h1>Fibonacci</h1>
+    <h2>size</h2>
+    <div style="width: 88vw;"><canvas id="fibonacci-size"></canvas></div>
+    <h2>cpu</h2>
+    <div style="width: 88vw;"><canvas id="fibonacci-cpu"></canvas></div>
+    <h2>memory</h2>
+    <div style="width: 88vw;"><canvas id="fibonacci-mem"></canvas></div>
+
+    <h1>Index List</h1>
+    <h2>size</h2>
+    <div style="width: 88vw;"><canvas id="index-list-size"></canvas></div>
+    <h2>cpu</h2>
+    <div style="width: 88vw;"><canvas id="index-list-cpu"></canvas></div>
+    <h2>memory</h2>
+    <div style="width: 88vw;"><canvas id="index-list-mem"></canvas></div>
+
+    <script type="module" src="matchMaybeJust.js"></script>
+    <script type="module" src="matchMaybeNothing.js"></script>
+    <script type="module" src="amountOf.js"></script>
+    <script type="module" src="factorial.js"></script>
+    <script type="module" src="fibonacci.js"></script>
+    <script type="module" src="indexList.js"></script>
+  </body>
+</html>

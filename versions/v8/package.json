@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "npx tsx src/index.ts"
+  },
+  "dependencies": {
+    "@harmoniclabs/plu-ts": "^0.8.0"
+  }
+}

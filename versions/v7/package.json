@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "npx tsx src/index.ts"
+  },
+  "dependencies": {
+    "@harmoniclabs/cbor": "^1.3.0",
+    "@harmoniclabs/plu-ts": "^0.7.0",
+    "@harmoniclabs/uint8array-utils": "^1.0.0",
+    "@types/node": "^22.5.0"
+  }
+}
