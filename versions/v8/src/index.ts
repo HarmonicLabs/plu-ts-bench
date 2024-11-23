@@ -26,8 +26,8 @@ void async function main() {
             matchMaybeNothing: benchTerm( matchMaybeNothing.toUPLC() ),
             amountOf: [
                 benchTerm( plovelace.toUPLC() ),
+                benchTerm( amountOfNothing.toUPLC() ),
                 benchTerm( amountOfSecond.toUPLC() ),
-                benchTerm( amountOfNothing.toUPLC() )
             ],
             factorial: benchNumList( pfactorial.toUPLC() ),
             fibonacci: benchNumList( pfibonacci.toUPLC() ),
@@ -41,7 +41,7 @@ function benchTerm( uplcTerm: UPLCTerm ): BenchTermData
 {
     const { budgetSpent, result } = Machine.eval( uplcTerm );
     return { 
-        size: encodeUPLC( new UPLCProgram([1,0,0], uplcTerm ) ).length,
+        size: encodeUPLC( new UPLCProgram([1,1,0], uplcTerm ) ).length,
         cpu: Number( budgetSpent.cpu ),
         mem: Number( budgetSpent.mem ),
         // isError: result instanceof ErrorUPLC

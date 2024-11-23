@@ -14,16 +14,17 @@ void async function main() {
     await Promise.all([
         exec("cd versions/v7 && npm run start"),
         exec("cd versions/v8 && npm run start"),
-        // exec("cd versions/v9 && npm run start"),
+        exec("cd versions/v9 && npm run start"),
     ]);
-
     
     const [
         v7,
-        v8
+        v8,
+        v9
     ]: BenchData[] = await Promise.all([
         readFile( resolve( process.cwd(), getDataPath("0.7") ), "utf-8" ),
-        readFile( resolve( process.cwd(), getDataPath("0.8") ), "utf-8" )
+        readFile( resolve( process.cwd(), getDataPath("0.8") ), "utf-8" ),
+        readFile( resolve( process.cwd(), getDataPath("0.9") ), "utf-8" ),
     ])
     .then( srcs =>
         srcs.map( src => JSON.parse( src ) )
@@ -31,10 +32,11 @@ void async function main() {
 
     await Promise.all([
         writeSingleCallChart(
-            "./interface/matchMaybe-Just.js",
+            "./interface/matchMaybeJust.js",
             JSON.stringify({
                 v7: v7.matchMaybeJust,
-                v8: v8.matchMaybeJust
+                v8: v8.matchMaybeJust,
+                v9: v9.matchMaybeJust,
             }),
             "match-maybe-just"
         ),
@@ -42,7 +44,8 @@ void async function main() {
             "./interface/matchMaybeNothing.js",
             JSON.stringify({
                 v7: v7.matchMaybeNothing,
-                v8: v8.matchMaybeNothing
+                v8: v8.matchMaybeNothing,
+                v9: v9.matchMaybeNothing,
             }),
             "match-maybe-nothing"
         ),
@@ -50,7 +53,8 @@ void async function main() {
             "./interface/amountOf.js",
             JSON.stringify({
                 v7: v7.amountOf,
-                v8: v8.amountOf
+                v8: v8.amountOf,
+                v9: v9.amountOf,
             }),
             "amount-of"
         ),
@@ -58,7 +62,8 @@ void async function main() {
             "./interface/factorial.js",
             JSON.stringify({
                 v7: v7.factorial,
-                v8: v8.factorial
+                v8: v8.factorial,
+                v9: v9.factorial,
             }),
             "factorial"
         ),
@@ -66,7 +71,8 @@ void async function main() {
             "./interface/fibonacci.js",
             JSON.stringify({
                 v7: v7.fibonacci,
-                v8: v8.fibonacci
+                v8: v8.fibonacci,
+                v9: v9.fibonacci,
             }),
             "fibonacci"
         ),
@@ -74,7 +80,8 @@ void async function main() {
             "./interface/indexList.js",
             JSON.stringify({
                 v7: v7.indexList,
-                v8: v8.indexList
+                v8: v8.indexList,
+                v9: v9.indexList,
             }),
             "index-list"
         )

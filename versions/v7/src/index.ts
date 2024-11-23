@@ -27,8 +27,8 @@ void async function main() {
             matchMaybeNothing: benchTerm( matchMaybeNothing.toUPLC() ),
             amountOf: [
                 benchTerm( plovelace.toUPLC() ),
+                benchTerm( amountOfNothing.toUPLC() ),
                 benchTerm( amountOfSecond.toUPLC() ),
-                benchTerm( amountOfNothing.toUPLC() )
             ],
             factorial: benchNumList( pfactorial.toUPLC() ),
             fibonacci: benchNumList( pfibonacci.toUPLC() ),

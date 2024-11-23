@@ -11,7 +11,7 @@ const colors = [
 ];
 
 (function () {
-  const data = {"v7":[{"size":1632,"cpu":6398297,"mem":21452},{"size":1864,"cpu":8936968,"mem":29614},{"size":1672,"cpu":7089448,"mem":24456}],"v8":[{"size":1632,"cpu":4804309,"mem":21452},{"size":1864,"cpu":6645776,"mem":29614},{"size":1672,"cpu":5093976,"mem":24456}]};
+  const data = {"v7":[{"size":1632,"cpu":6398297,"mem":21452},{"size":1672,"cpu":7089448,"mem":24456},{"size":1864,"cpu":8936968,"mem":29614}],"v8":[{"size":1704,"cpu":4804309,"mem":21452},{"size":1744,"cpu":5093976,"mem":24456},{"size":1936,"cpu":6645776,"mem":29614}],"v9":[{"size":1584,"cpu":4404309,"mem":18952},{"size":1624,"cpu":4677976,"mem":21856},{"size":1816,"cpu":6197776,"mem":26814}]};
 
   new Chart(
     document.getElementById('amount-of-size'),

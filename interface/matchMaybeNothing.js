@@ -2,7 +2,7 @@
 import Chart from 'chart.js/auto'
 
 (function() {
-  const data = {"v7":{"size":432,"cpu":1997141,"mem":5500},"v8":{"size":432,"cpu":1413339,"mem":5500}};
+  const data = {"v7":{"size":432,"cpu":1997141,"mem":5500},"v8":{"size":464,"cpu":1413339,"mem":5500},"v9":{"size":472,"cpu":1413339,"mem":5500}};
 
   const keys = Object.keys(data);
 

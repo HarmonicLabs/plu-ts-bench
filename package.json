@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "start": "npx tsx scripts/bench-all.ts",
+    "start": "npm run build && npm run dev",
     "dev": "parcel interface/index.html",
-    "build": "parcel build interface/index.html"
+    "build": "npx tsx scripts/bench-all.ts"
   },
   "dependencies": {
     "@cubejs-client/core": "^0.31.0",
